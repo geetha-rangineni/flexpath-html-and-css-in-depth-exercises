@@ -1,0 +1,32 @@
+html, body {
+  height: 100%; /* Make sure the body and html take up the full height */
+  margin: 0; /* Remove default margin */
+}
+
+.container {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  body {
+    background-color: lightgray; /* Set the background color */
+    margin: 0; /* Remove any default margin */
+    height: 100vh; /* Ensure body takes full viewport height */
+    display: flex;
+    flex-direction: column; /* Allows main content to expand */
+  }
+  
+  header {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/282/929/non_2x/red-and-gold-rectangle-long-banner-design-free-vector.jpg');
+    background-size: cover; /* Make sure the image covers the header */
+    background-position: center; /* Center the background image */
+    color: white; /* Make text white for contrast */
+    text-align: center; /* Center align the text */
+    padding: 50px;
+    height: 300px
+  }
+
+
+  
+ 

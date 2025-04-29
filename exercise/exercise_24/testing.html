@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First HTML Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      position: relative;
+    }
+    #main-title {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .responsive-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    .menu-icon {
+      font-size: 2rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    #nav-links {
+      list-style: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      display: none;
+      flex-direction: column;
+    }
+    #nav-links li {
+      text-align: center;
+      padding: 1rem 0;
+    }
+    #nav-links a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem;
+      display: block;
+    }
+    #nav-links.show {
+      display: flex;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .highlight {
+      background-color: #d4edda;
+      padding: 0.5rem;
+      margin-top: 1rem;
+    }
+    .gallery {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    form {
+      padding: 2rem;
+      background-color: #f4f4f4;
+      margin: 2rem;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .site-footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+
+  <script defer>
+    function toggleMenu() {
+      const navLinks = document.getElementById('nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1 id="main-title">Welcome to My Page</h1>
+    <nav class="responsive-nav">
+      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Hello! I'm learning HTML and CSS. This is a paragraph about me.</p>
+
+      <p>This paragraph is blue.</p>
+
+      <section class="highlight">
+        <p>This paragraph is green.</p>
+      </section>
+
+      <section>
+        <h3>My Hobbies</h3>
+        <nav>
+          <ul>
+            <li class="highlight">Reading</li>
+            <li class="highlight">Cooking</li>
+            <li class="highlight">Coding</li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="gallery">
+        <img src="../img/img1.png" alt="Photo 1">
+        <img src="../img/img2.png" alt="Photo 2">
+        <img src="../img/img3.png" alt="Photo 3">
+        <img src="../img/img4.png" alt="Photo 4">
+        <img src="../img/img5.png" alt="Photo 5">
+        <img src="../img/img6.png" alt="Photo 6">
+      </section>
+    </div>
+  </main>
+
+  <form action="#" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 My Website</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 22: Understanding CSS Specificity</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .answer {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #007BFF;
+        }
+        ul {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercise 22: Understanding CSS Specificity</h1>
+
+    <h2>Description:</h2>
+    <p>
+        Explain why an element with an <code>inline style="color: red;"</code> will have red text even
+        if an external CSS file sets the color to blue for that element.
+    </p>
+
+    <h2>Answer:</h2>
+    <div class="answer">
+        <p>
+            Inline styles have higher specificity than external stylesheets because they are applied directly to the element.
+        </p>
+        <p>The specificity hierarchy is:</p>
+        <ul>
+            <li>Inline styles (style attribute) – <strong>Highest specificity</strong>.</li>
+            <li>IDs (<code>#id</code> selectors).</li>
+            <li>Classes, attributes, and pseudo-classes (<code>.class</code>, <code>[type="text"]</code>, <code>:hover</code>).</li>
+            <li>Elements and pseudo-elements (<code>h1</code>, <code>::after</code>).</li>
+        </ul>
+        <p>
+            Therefore, the inline <code>color: red;</code> overrides the external CSS <code>color: blue;</code>.
+        </p>
+    </div>
+</body>
+</html>
